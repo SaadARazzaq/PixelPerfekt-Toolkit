@@ -3,4 +3,3 @@ opencv-python
 numpy
 matplotlib
 Pillow
-opencv-python-headless
