@@ -1,4 +1,6 @@
-## Description: 📷✨
+# PixelPerfekt-Toolkit
+---
+## Project Description: 📷✨
 PixelPerfekt Toolkit is a web application built with Streamlit, offering a range of image processing functionalities to transform pixels with precision. Users can upload images in JPG, JPEG, or PNG format and apply various operations such as converting to grayscale, viewing in HSV color space, applying color masks, detecting contours, and applying different types of image blurring filters. The toolkit provides interactive sliders and checkboxes for parameter adjustment and visualization of histograms to understand pixel distributions.
 
 ## Features: 🌟
