@@ -1,7 +1,3 @@
-import os
-# Set environment variable for headless OpenCV
-os.environ["OPENCV_HEADLESS_OPENGL"] = "1"
-
 import streamlit as st
 import cv2
 import numpy as np
