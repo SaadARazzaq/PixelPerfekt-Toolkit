@@ -3,41 +3,73 @@
 ## Project Description: 📷✨
 PixelPerfekt Toolkit is a web application built with Streamlit, offering a range of image processing functionalities to transform pixels with precision. Users can upload images in JPG, JPEG, or PNG format and apply various operations such as converting to grayscale, viewing in HSV color space, applying color masks, detecting contours, and applying different types of image blurring filters. The toolkit provides interactive sliders and checkboxes for parameter adjustment and visualization of histograms to understand pixel distributions.
 
+## Video Demonstration 📹
+Click Below to watch the video 👇👇👇
+
+<a href="https://www.loom.com/share/6252e15c1c5648c78b9bbf0ec7bdc4f4?sid=bff091b1-cfcc-4f2b-977e-ca4e12b306c1" target="_blank">
+<img width="991" alt="Screenshot 2024-08-18 at 07 13 39" src="https://github.com/user-attachments/assets/b2db011b-1dbd-4552-9d9a-c34200e8ff7e">
+</a>
+
 ## Features: 🌟
 - Upload images in JPG, JPEG, or PNG format.
 - Convert images to grayscale.
 - View images in HSV color space.
 - Apply color masks based on user-defined color ranges.
 - Detect contours in the image.
-- Apply various image blurring filters including kernel blur, box filter, Gaussian blur, median blur, and bilateral filter.
 - Sharpen images using a user-specified alpha and beta values.
-- Visualize histograms for both original and processed images.
+- Visualize histograms for both original and processed images in REALTIME.
 - Option to view enlarged histograms.
 
-## Usage: 🖥️
-1. Upload an image by clicking the "Upload Image" button.
-2. Select the desired operation from the sidebar dropdown menu.
-3. Adjust parameters using sliders or checkboxes, if applicable.
-4. View the processed image and its corresponding histogram.
-5. Optionally, check the "Show Enlarged Histogram" checkbox to view the histogram in a larger size.
+## Folder Structure: 🗂️
+
+The application organizes the output images into respective folders based on the applied filter:
+
+- **Original_Image/**: Contains original images and their histograms.
+- **Gray/**: Stores grayscale images and their histograms.
+- **Box_filter/**: Saves images processed with the box filter and their histograms.
+- **Gaussian_blur/**: Stores Gaussian-blurred images and corresponding histograms.
+- **Median_blur/**: Contains images processed with median blur and their histograms.
+- **Bilateral_filter/**: Stores images processed with bilateral filtering and their histograms.
+- **Kernel_blur/**: Saves images processed with kernel blur and their histograms.
+- **Sharpened/**: Stores sharpened images and their histograms.
+- **Color_mask/**: Contains color-masked images and corresponding histograms.
+- **Contours/**: Stores contour-detected images and their histograms.
+- **Hsv/**: Saves images in HSV color space and corresponding histograms.
+
+## Docker Integration: 🐳
+To streamline the setup and avoid recreating virtual environments, the application is containerized using Docker. This ensures consistent execution across different environments.
+
+## Filters Implemented: ⚡️
+1. `Original` (Not technically a filter)
+2. `Gray`
+3. `HSV`
+4. `Color Mask`
+5. `Contours`
+6. `Kernel Blur`
+7. `Box Filter`
+8. `Gaussian Blur`
+9. `Median Blur`
+10. `Bilateral Filter`
+11. `Sharpened`
 
 ## Technologies Used: 🛠️
+
 - Streamlit
 - OpenCV
 - NumPy
 - Matplotlib
 - Python Imaging Library (PIL)
+- Docker
 
-## How to Run: ▶️
-1. Install the required libraries by running `pip install streamlit opencv-python-headless numpy matplotlib pillow`.
-2. Save the provided code in a file named `app.py`.
-3. Open a terminal and navigate to the directory containing `app.py`.
-4. Run the Streamlit application by executing `streamlit run app.py`.
-5. Access the application in a web browser at `http://localhost:8501`.
+### Running the Application with Docker:
+- **Build and run the Docker Image:**
+   ```bash
+   docker-compose up --build
+   ```
+- **Access the Application:**
+Open your web browser and navigate to
+```bash
+http://localhost:8501
+```
 
-## Future Enhancements: 🔮
-- Add more image processing operations such as edge detection, morphological operations, and image transformations.
-- Improve the user interface with additional customization options and interactive elements.
-- Optimize image processing algorithms for better performance with large images.
-
-📌 **Note: For optimal performance, it's recommended to run the application on a machine with sufficient computational resources, especially when processing large images or applying complex operations.**
+**📌 Note: For optimal performance, it's recommended to run the application on a machine with sufficient computational resources, especially when processing large images or applying complex operations.**
